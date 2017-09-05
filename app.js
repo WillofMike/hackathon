@@ -11,20 +11,22 @@ form.addEventListener('submit', function(event) {
 
  var id = event.target.elements.search.value;
 
- fetch('https://swapi.co/api/species/').then(function(response) {
-    return response.json().then(function(speciesData){
-      var number = Math.floor(Math.random()*10)
-      console.log(speciesData);
-      var name = speciesData.results[number].name
-      var cllasss = speciesData.results[number].classification
-      var name = speciesData.results[number].name
-      var plants = speciesData.results[number].language
-      planet.innerHTML = 'Language: ' + plants
-      heading.innerHTML = 'Species: ' + name
-      cllass.innerHTML = 'Classification: ' +  cllasss
+ fetch('https://swapi.co/api/species/')
+  .then(function(response) {
+    return response.json()
+      .then(function(speciesData){
+          var number = Math.floor(Math.random()*10)
+          console.log(speciesData);
+          var name = speciesData.results[number].name
+          var cllasss = speciesData.results[number].classification
+          var name = speciesData.results[number].name
+          var plants = speciesData.results[number].language
+          planet.innerHTML = 'Language: ' + plants
+          heading.innerHTML = 'Species: ' + name
+          cllass.innerHTML = 'Classification: ' +  cllasss
 
 
-     res.append(heading)
+      res.append(heading)
       res.append(cllass)
       res.append(planet)
 
