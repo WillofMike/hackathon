@@ -1,0 +1,19 @@
+header {
+  display: flex;
+  background-color: darkred;
+  color: white;
+  text-align: center;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+input {
+  width: 400px;
+  text-align: center;
+}
+
+form {
+  text-align: center;
+
+}
