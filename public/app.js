@@ -9,7 +9,7 @@ form.addEventListener('submit', function(event) {
   event.preventDefault();
   el.innerHTML = ''
 
- var id = event.target.elements.search.value;
+  var id = event.target.elements.search.value;
 
  fetch('https://swapi.co/api/species/')
   .then(function(response) {
